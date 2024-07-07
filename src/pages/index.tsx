@@ -15,13 +15,18 @@ export default function Home() {
     <div className="flex gap-16 carousel w-full ml-auto">
       {
         shirts.map(shirt => (
-          <div key={shirt.id} className="min-w-[600px] min-h-[600px] bg-stone-600 flex flex-col justify-center items-center rounded-3xl">
+          <div key={shirt.id} className="p-2 bg-stone-600 flex flex-col items-center justify-between rounded-md overflow-hidden transition-all duration-200 [&_div]:hover:translate-y-0">
             <Image
+              className="p-8"
               src={shirt.img}
               width={shirt.width}
               height={shirt.height}
               alt=""
             />
+            <div className="*:text-xl flex justify-between w-full rounded-md p-4 bg-stone-800 translate-y-[120%] opacity-80 transition-all duration-200 ">
+              <span>Camiseta show</span>
+              <strong>R$ 40,00</strong>
+            </div>
           </div>
         ))
       }
