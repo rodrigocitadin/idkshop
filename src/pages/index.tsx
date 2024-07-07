@@ -12,10 +12,10 @@ export default function Home() {
   ]
 
   return (
-    <div className="flex gap-16">
+    <div className="flex gap-16 carousel w-full ml-auto">
       {
         shirts.map(shirt => (
-          <div className="min-w-[600px] min-h-[600px] bg-stone-600 flex flex-col justify-center items-center rounded-3xl">
+          <div key={shirt.id} className="min-w-[600px] min-h-[600px] bg-stone-600 flex flex-col justify-center items-center rounded-3xl">
             <Image
               src={shirt.img}
               width={shirt.width}
